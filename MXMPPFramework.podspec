@@ -23,20 +23,18 @@
     this framework performs    well regardless of whether it\'s being run on an old iPhone, or
     on a 12-core Mac Pro. (And it won\'t block the main thread... at all).'
 
-    s.preserve_path = 'module/module.modulemap'
-
     # XMPPFramework.h is used internally in the framework to let modules know
     # what other optional modules are available. Since we don't know yet which
     # subspecs have been selected, include all of them wrapped in defines which
     # will be set by the relevant subspecs.
 
-    # s.prepare_command = <<-'END'
-    # echo '#import "XMPP.h"' > XMPPFramework.h
-    # grep '#define _XMPP_' -r /Extensions \
-    # | tr '-' '_' \
-    # | perl -pe 's/Extensions\/([A-z0-9_]*)\/([A-z]*.h).*/\n#ifdef HAVE_XMPP_SUBSPEC_\U\1\n\E#import "\2"\n#endif/' \
-    # >> XMPPFramework.h
-    # END
+    s.prepare_command = <<-'END'
+    echo '#import "XMPP.h"' > XMPPFramework.h
+    grep '#define _XMPP_' -r /Extensions \
+    | tr '-' '_' \
+    | perl -pe 's/Extensions\/([A-z0-9_]*)\/([A-z]*.h).*/\n#ifdef HAVE_XMPP_SUBSPEC_\U\1\n\E#import "\2"\n#endif/' \
+    >> XMPPFramework.h
+    END
 
     s.subspec 'Core' do |core|
       core.source_files = ['XMPPFramework.h', 'Core/**/*.{h,m}', 'Vendor/libidn/*.h', 'Authentication/**/*.{h,m}', 'Categories/**/*.{h,m}', 'Utilities/**/*.{h,m}']

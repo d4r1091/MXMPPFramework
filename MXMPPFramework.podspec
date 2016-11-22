@@ -51,15 +51,15 @@
     end
 
     s.subspec 'Authentication' do |ss|
-    ss.dependency 'PNXMPPFramework/Core'
+    ss.dependency 'MXMPPFramework/Core'
     end
 
     s.subspec 'Categories' do |ss|
-    ss.dependency 'PNXMPPFramework/Core'
+    ss.dependency 'MXMPPFramework/Core'
     end
 
     s.subspec 'Utilities' do |ss|
-    ss.dependency 'PNXMPPFramework/Core'
+    ss.dependency 'MXMPPFramework/Core'
     end
 
     s.subspec 'BandwidthMonitor' do |ss|

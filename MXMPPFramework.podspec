@@ -21,9 +21,9 @@
     all built atop a modular architecture, allowing you to plug-in any code needed for the job.
     Additionally the framework is massively parallel and thread-safe. Structured using GCD,
     this framework performs    well regardless of whether it\'s being run on an old iPhone, or
-    on a 12-core Mac Pro. (And it won\'t block the main thread... at all).
+    on a 12-core Mac Pro. (And it won\'t block the main thread... at all).'
 
-    s.preserve_path = 'module/module.modulemap''
+    s.preserve_path = 'module/module.modulemap'
 
     # XMPPFramework.h is used internally in the framework to let modules know
     # what other optional modules are available. Since we don't know yet which

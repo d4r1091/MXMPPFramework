@@ -73,12 +73,6 @@
     ss.framework = 'CoreData'
     end
 
-    s.subspec 'FileTransfer' do |ss|
-      ss.source_files = 'Extensions/FileTransfer/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
     s.subspec 'GoogleSharedStatus' do |ss|
     ss.source_files = 'Extensions/GoogleSharedStatus/**/*.{h,m}'
     ss.dependency 'MXMPPFramework/Core'
@@ -169,12 +163,6 @@
     ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
     end
 
-    s.subspec 'XEP-0077' do |ss|
-      ss.source_files = 'Extensions/XEP-0077/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
     s.subspec 'XEP-0082' do |ss|
     ss.source_files = 'Extensions/XEP-0082/**/*.{h,m}'
     ss.dependency 'MXMPPFramework/Core'
@@ -218,12 +206,6 @@
     ss.dependency 'MXMPPFramework/XEP-0203'
     ss.dependency 'MXMPPFramework/XEP-0085'
     ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
-    s.subspec 'XEP-0147' do |ss|
-      ss.source_files = 'Extensions/XEP-0147/**/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
     end
 
     s.subspec 'XEP-0153' do |ss|
@@ -314,41 +296,10 @@
     ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
     end
 
-    s.subspec 'XEP-0334' do |ss|
-    ss.source_files = 'Extensions/XEP-0334/**/*.{h,m}'
-    ss.dependency 'MXMPPFramework/Core'
-    ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
     s.subspec 'XEP-0335' do |ss|
     ss.source_files = 'Extensions/XEP-0335/**/*.{h,m}'
     ss.dependency 'MXMPPFramework/Core'
     ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
-    s.subspec 'XEP-0352' do |ss|
-      ss.source_files = 'Extensions/XEP-0352/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
-    s.subspec 'XEP-0357' do |ss|
-      ss.source_files = 'Extensions/XEP-0357/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
-    s.subspec 'XEP-0313' do |ss|
-      ss.source_files = 'Extensions/XEP-0313/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.dependency 'MXMPPFramework/XEP-0059'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-    end
-
-    s.subspec 'XEP-0363' do |ss|
-      ss.source_files = 'Extensions/XEP-0363/*.{h,m}'
-      ss.dependency 'MXMPPFramework/Core'
-      ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
     end
 
     s.subspec 'XMPPMUCLight' do |ss|

@@ -307,6 +307,7 @@
       ss.dependency 'MXMPPFramework/Core'
       ss.dependency 'MXMPPFramework/CoreDataStorage'
       ss.dependency 'MXMPPFramework/XEP-0203'
+      ss.dependency 'MXMPPFramework/XEP-0045'
       ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
     end
   end
